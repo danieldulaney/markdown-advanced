@@ -1,0 +1,22 @@
+{
+  "name": "markdown-advanced",
+  "description": "Markdown, with a few additional features",
+  "main": "",
+  "authors": [
+    "danieldulaney <dulaney.daniel@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies":[
+
+  ]
+}
