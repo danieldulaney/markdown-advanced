@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!--
-		This automatically grabs the bootstrap css styles, which can really help put together a page quickly.
-		More information at getbootstrap.com
-		-->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" href="/bower/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/style.css">
+
+		<script src="/bower/angular/angular.min.js"></script>
+		<script src="/js/mdaApp.js"></script>
+		<script src="/js/mdaUtil.js"></script>
 	</head>
-	<body style="display:flex;justify-content:center;">
-		<div class="panel panel-default" style="margin:10em 5em">
-			<div class="panel-heading">
-				<h4>It works!</h4>
+	<body ng-app="mdaApp">
+		<div class="container-fluid">
+			<div class="col-md-6">
+				<textarea ng-model="inputtext" class="mda-input"> </textarea>
 			</div>
-			<div class="panel-body">
-				<p>Your website is up!</p>
-				<p>Modify anything in the <code>./public</code> folder to get started right away, or poke around in <code>./app.js</code> to dig deeper.</p>
+			<div class="col-md-6">
+				<pre>{{inputtext|rendermda}}</pre>
 			</div>
 		</div>
 	</body>
