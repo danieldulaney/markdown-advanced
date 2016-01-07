@@ -1,21 +1,25 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" href="/bower/bootstrap/dist/css/bootstrap.min.css">
-		<link rel="stylesheet" href="/css/style.css">
+<html ng-app="mdaApp">
+<head>
+	<link rel="stylesheet" href="/css/dark.css">
 
-		<script src="/bower/angular/angular.min.js"></script>
-		<script src="/js/mdaApp.js"></script>
-		<script src="/js/mdaUtil.js"></script>
-	</head>
-	<body ng-app="mdaApp">
-		<div class="container-fluid">
-			<div class="col-md-6">
-				<textarea ng-model="inputtext" class="mda-input"> </textarea>
-			</div>
-			<div class="col-md-6">
-				<pre>{{inputtext|rendermda}}</pre>
-			</div>
-		</div>
-	</body>
+	<script src="/bower/angular/angular.min.js"></script>
+	<script src="/bower/angular-sanitize/angular-sanitize.min.js"></script>
+	<script src="/bower/markdown/lib/angular.js"></script>
+	
+	<script src="/bower/codemirror/lib/codemirror.js"></script>
+	<link src="/bower/codemirror/lib/codemirror.css">
+
+	<script src="/bower/angular-ui-codemirror/ui-codemirror.min.js"></script>
+
+	<script src="/js/mdaApp.js"></script>
+</head>
+<body>
+	<div id="headerbar">Headerbar</div>
+	<div id="content">
+		<ui-codemirror></ui-codemirror>
+		<div id="middlebar"></div>
+		<div id="output" ng-bind-html="input|markdown"></div>
+	</div>
+</body>
 </html>

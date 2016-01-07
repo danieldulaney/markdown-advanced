@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/bower/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/style.css">
+
+		<script src="/bower/angular/angular.min.js"></script>
+		<script src="/bower/angular-sanitize/angular-sanitize.min.js"></script>
+		<script src="/bower/markdown/lib/angular.js"></script>
+		<script src="/js/mdaApp.js"></script>
+		<script src="/js/mdaUtil.js"></script>
+	</head>
+	<body ng-app="mdaApp">
+		<div class="container-fluid">
+			<div class="col-md-6">
+				<textarea ng-model="inputtext" class="mda-input form-control"> </textarea>
+			</div>
+			<div class="col-md-6">
+				<pre>{{inputtext|markdown}}</pre>
+				<div class="panel panel-default">
+					<div class="panel-heading">Rendered Text</div>
+					<div class="panel-body" ng-bind-html="inputtext|markdown"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
